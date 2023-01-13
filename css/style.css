@@ -1,0 +1,248 @@
+html, body{
+    background-color: #f9f9f9;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'SourceSansPro-SemiBold';
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('fonts/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: url('fonts/SourceSansPro-SemiBold.ttf');
+}
+main{
+margin: auto;
+width: 1200px;
+padding-top: 114px;            
+overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+b {
+font-family: 'SourceSansPro-Bold';
+}
+
+.product {
+position: relative;
+overflow: hidden;
+width: 100%;
+margin-bottom: 30px;
+}
+
+.product-category {
+font-size: 33px;
+font-weight: 500;
+margin: 16px;
+margin-left: 30px;
+font-family: 'SourceSansPro-Bold';                    
+}
+
+.product-container {
+padding-left: 68px;
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+display: none;
+}
+
+.product-card {
+flex: 0 0 auto;
+width: 250px;
+margin-right: 40px;
+background-color: #dedede;
+border-radius: 15px;
+}
+
+.product-image {
+position: relative;
+width: 100%;
+height: 256px;
+overflow: hidden;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+
+}
+
+.product-thumb {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.discount-tag {
+position: absolute;
+background: #ff7d7d;
+padding: 5px;
+border-radius: 5px;
+color: #fff;
+right: 10px;
+top: 10px;
+text-transform: capitalize;
+display: none;
+}
+
+.card-btn {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+padding: 10px;
+width: 44px;
+text-transform: capitalize;
+border: none;
+outline: none;
+background: #fff;
+border-radius: 30px;
+transition: 0.5s;
+cursor: pointer;
+opacity: 0;        
+}
+
+.product-card:hover .card-btn {
+opacity: 1;
+}
+
+.card-btn:hover {
+background: #1bb56e;
+}
+.card-btn span:hover {
+color: #fff;
+}
+
+.product-info-link{
+text-decoration: none;
+
+}
+.product-info {
+padding: 10px;
+cursor: pointer;
+background-color: #dedede;
+color: black;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+
+}
+.price {
+font-weight: 900;
+font-size: 20px;
+color: #198754;
+}
+.actual-price {
+margin-left: 20px;
+opacity: 0.5;
+text-decoration: line-through;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 4vw;
+    height: 91%;
+    position: absolute;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #f9f9f9 100%);
+    cursor: pointer;
+    z-index: 8;        
+}
+
+.pre-btn {
+left: 0;
+transform: rotate(180deg);
+}
+
+.nxt-btn {
+right: 0;
+}
+
+.collection-container {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 10px;
+}
+
+.collection {
+position: relative;
+}
+
+.collection img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.collection p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #fff;
+font-size: 50px;
+text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+grid-column: span 2;
+margin-bottom: 10px;
+}
+.product-brand{
+    font-size: 20px;
+    max-width: 204px;
+    margin: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'SourceSansPro-Bold';                        
+}
+.star span{
+    font-size: 15px;
+    color: #ffad0a;
+}
+.card-btn span.material-symbols-outlined {
+    margin-bottom: -2px;
+}
+.pro-internacional{
+    background-color: #1bb56e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    font-size: 16px;
+    width: auto;  
+    cursor: pointer;       
+}   
+
+/*** Header ***/
+
+/*****/
+
+@media (max-width: 1200px){
+    main{
+        margin: auto;
+        width: 100%;
+        padding: 14px; 
+        padding-top: 114px;                                       
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;            
+    }
+}            
